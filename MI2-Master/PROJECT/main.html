@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Database</title>
+				<script src="/js/jquery-3.1.1.js"></script>
+				<link rel="stylesheet" href="stylesheet.css">
+
+</head>
+
+<body>
+		<nav >
+			<ul>
+				<li><a id="data" href="main.html" >Database</a></li>
+                <li><a id="klas" href="#mijnklas">Mijn klas</a></li>
+                <li><a id="nieuws" href="#nieuwsbord">Nieuwsbord</a></li>
+                <li><a id="logout" href="index.html">Logout</a></li>
+			</ul>
+		</nav>
+			
+			
+				<ul id="database">
+                
+                </ul>
+				
+				<script>
+                  "use strict"  
+                 
+                  
+             
+                    $(document).ready(function() {
+                      var zichtbareleerlingen ;
+                   
+                        
+                        $(document).on('click', 'a.buttonprofiel ', function () {
+                       var LinkId = this.id;
+                           
+                            var  Id = LinkId.split('b');
+                            
+                             window.location.href = 'profiel.html' + '#' +Id[1];
+                           
+                       
+});
+                        
+                        $('#nieuws').click(function(){
+                            window.location.replace('nieuwsbord.html')
+                        }) 
+                        
+                        
+                        
+                        
+                    
+                     $.ajax({
+				type:"GET",
+				url: "Gebruikers.json",
+				dataType : 'json',
+				}).done(function (data)
+					{   
+                       
+             
+                        
+                        
+                 /// filter op klas ingelogde leerkracht  
+                         
+                        var klasID = JSON.parse(sessionStorage.getItem('klasID'))
+                        var mijnklas = data.leerlingen.filter(function (lln) {  return (lln.klas === klasID );});
+                       
+               // toon  de klas van de leerkracht die ingelogd is
+             var toonklas = false;       
+              $("#klas").click(function(){ 
+                  $("#database").empty();
+                  
+                  if (toonklas== false){
+                      zichtbareleerlingen = mijnklas;
+                      sessionStorage.setItem('zichtbaar',JSON.stringify(zichtbareleerlingen))
+                      toonklas == true
+                      var j;
+                      for (j = 0 ; j < mijnklas.length; j++) {
+                     $("#database").append("<li class='list_item'><div class='card' id='card" + ( j +1 ) + "'> <div class='card-photo'><img src='img/" + mijnklas[j].foto + ".jpeg'></div><div class='gegevens'>" + "<p><b>"+ mijnklas[j].voornaam   + " " + mijnklas[j].achternaam + "</b></p><p><b>Klas: " + mijnklas[j].klas + "</b></p>" + "<a  class='buttonprofiel' id='b" + j +"'>Open Dossier</a></p></div></div></li>");
+                      
+                      }}})
+            
+             
+              
+              
+              
+              
+              
+              
+              ////algemeeen
+               
+              
+              
+              
+              
+                        $("#database").empty();
+                        var toonkaarten = false;
+                  if (toonkaarten == false){
+                      zichtbareleerlingen = data.leerlingen;
+                    sessionStorage.setItem('zichtbaar',JSON.stringify(zichtbareleerlingen))
+                      toonkaarten == true
+                      var i;
+                      for (i = 0 ; i < data.leerlingen.length; i++) {
+                     $("#database").append("<li class='list_item'><div class='card' id='card" + ( i +1 ) + "'> <div class='card-photo'><img src='img/" + data.leerlingen[i].foto + ".jpeg'></div><div class='gegevens'>" + "<p><b>"+ data.leerlingen[i].voornaam   + " " + data.leerlingen[i].achternaam + "</b></p><p><b>Klas: " + data.leerlingen[i].klas + "</b></p>" + "<a  class='buttonprofiel' id='b" + i +"'>Open Dossier</a></p></div></div></li>")}}})});
+                       
+              
+                    
+                   
+                    
+          
+
+
+
+
+
+                    
+                    
+                    
+                    
+                    
+                   
+                         
+                         
+                 
+    
+
+	
+	</script>
+    
+    
+ 
+        
+
+
+</body>
+</html>

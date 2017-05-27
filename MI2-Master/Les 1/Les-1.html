@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta name="description" content="" />
+		<meta name="author" content="Steven" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>MI2-les1</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        
+        
+        
+        //declaratie
+        var Waarde1 = 10;
+         var Waarde2 =  10; 
+        var uitkomst1 = 4 * 5 + 10;
+        var uitkomst2 = 4 * (5 + 10);
+        document.write('uitkomst 1:' + uitkomst1 + '<br>uitkomst 2:' + uitkomst2);
+        
+        //functies
+        function Optellen(value1, value2) {
+            return value1 + value2;
+        }
+
+        function Aftrekken(value1, value2) {
+            return value1 - value2;
+        }
+
+        function Vermenigvuldigen(value1, value2) {
+            return value1 * value2;
+        }
+
+        function Delen(value1, value2) {
+            return value1 / value2;
+        }
+        
+        //Weergave
+          
+        document.write('<br>waarden:' + Waarde1 +' '+ Waarde2);
+        document.write('<br>Optellen :' + Optellen(Waarde1, Waarde2));
+        document.write('<br>Aftrekken :' + Aftrekken(Waarde1, Waarde2));
+        document.write('<br>Vermenigvuldigen :' + Vermenigvuldigen(Waarde1, Waarde2));
+        document.write('<br>Delen :' + Delen(Waarde1, Waarde2));
+       
+        
+    </script>
+   
+    
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+				<meta name="description" content="" />
+		<meta name="author" content="Steven" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>MI2-les7-GameOfThrones</title>
+				<script src="/PROJECT/js/jquery-3.1.1.js"></script>
+				<style>
+					body{
+							 background: grey;
+					}	
+   #wrapper {
+    width:100%;
+    overflow: hidden; 
+			}			
+#summary {
+    width: 60%;
+    float:left; 
+   
+	font-size: 1.75em;
+}
+#box {
+   
+    float: left; 
+	
+}
+#ratings{
+		float: left;
+		font-size: 1em;
+}
+ #episodes {
+
+       max-width: 80vw;
+       margin: auto;
+       padding: 0.1em;
+	   text-align: center;
+	 
+    }
+    
+    #content {
+        display: none;
+		background-color: white;
+    }
+    
+	</style>
+				<script type="text/javascript">
+					"use strict"
+					var dataserie,dataseries,data,episodeinfo,episodetitel,episodesummary,episodeimg;
+					
+					
+							
+					
+					//api ajax request
+					$(function () {
+					$.ajax({
+					type : "GET",
+					url : "http://api.tvmaze.com/singlesearch/shows?q=game-of-thrones",
+					dataType : 'json'
+				}).done(function (response){
+						
+					
+						info = response;
+						console.log(info);
+						//text
+						$("h1").text(info.name);
+						// html
+						$("#summary").html(info.summary);
+						// txt
+						
+						// fotos
+						$("box").html("<img src='" + info.image.medium + "'/>")
+						
+						$("box").append("<figcaption>" + "ratings: " + info.rating.average+ "</figcaption>")
+					})
+					
+				$("#toon").click(function(){
+					console.log("alee");
+					$.ajax({
+					type : "GET",
+					url : "http://api.tvmaze.com/singlesearch/shows?q=game-of-thrones&embed=episodes",
+					dataType : 'json'
+				}).done(function (response){
+						console.log(response);
+						data = response;
+						console.log(data._embedded.episodes.length);
+						for (var i = 0 ; i< data._embedded.episodes.length -1 ;i++){
+						episodetitel =data._embedded.episodes[i].name;
+						episodesummary = data._embedded.episodes[i].summary;
+							if(i <data._embedded.episodes.length -1){
+								episodeimg=data._embedded.episodes[i].image.medium;
+								
+							}
+							console.log(episodetitel);
+							episodeinfo += "<div>" + "<h2>" + episodetitel + "</h2>" + "<div id='content'>" +  episodesummary + "<img src='" + episodeimg + "'/>" + "</div>" + "</div>";
+						}
+						$("#episodes").html(episodeinfo);
+						  $("h2").click(function () {
+                    if ($(this).next().is(":hidden")) {
+                        $(this).next().slideDown("fast");
+                    }
+                    else {
+                        $(this).next().hide();
+                    }
+                });
+					})	
+				});
+			
+	});		
+	</script>
+</head>
+
+<body>
+				
+				<header>
+					<h1></h1>
+				</header>
+				<div id="wrapper">
+				<article id ="summary">
+					<p></p>
+				</article>
+				<figure></figure>
+				</div>
+				<input type="button" value="toonafleveringen" id="toon">
+				<div id="episodes"></div>
+				
+			
+			
+</body>
+</html>

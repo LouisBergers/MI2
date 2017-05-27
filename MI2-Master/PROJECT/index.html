@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Home</title>
+				<script src="/js/jquery-3.1.1.js"></script>
+				<link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<script>
+                    "use strict"
+    $(document).ready(function() {
+           $.ajax({      
+                    type:"GET",
+				url: "Gebruikers.json",
+				dataType : 'json',
+				}).done(function (data)
+					{               
+    
+        $('#login').click(function() 
+                          
+          {
+            var initusr = $("#user").val();
+            var initww = $("#pw").val();
+            var usr = initusr.toUpperCase();
+			var ww =  initww.toUpperCase();	
+            for (var i = 0; i< data.leerkrachten.length; i++)
+						{
+                            
+							if (usr === (data.leerkrachten[i].achternaam.toUpperCase()+ "." +data.leerkrachten[i].voornaam.toUpperCase()) && ww === data.leerkrachten[i].ww.toUpperCase())
+							{
+                                
+                                window.location.replace('main.html')
+                                var leerkrachtID = JSON.stringify(i)
+                                var klasID = JSON.stringify(data.leerkrachten[i].klas)
+                                
+								    sessionStorage.setItem('leerkrachtID', leerkrachtID);
+                                    sessionStorage.setItem('klasID', klasID);
+                                var acces = true;
+							}
+				            
+                                
+                            
+						}
+           
+               if(acces != true){ alert("het lijkt erop dat je de foute gegevens gebruikt")}
+               
+               
+               
+          })})});
+                          
+   
+    
+	</script>
+
+		<nav >
+			<ul>
+				<li><a id='test' href="logintest.html">Login</a></li>
+			</ul>
+		</nav>
+			
+	<body>	
+         
+        
+        
+    <div id="profielinfo">    
+    <ul class="tabs">
+        <li class="tab current" data-tab="tab-1">Login</li>
+    </ul>
+        
+        
+        
+        
+        
+        <div id="tab-1" class="tab-content current">
+        <h2>Login</h2>
+    <h3>Log hieronder in met naam.voornaam (bv. kasteel.frank)</h3>
+        
+            <br>
+    <form    id="form" >
+        <br>
+        <label>Gebruikersnaam:</label>
+    <input type="textfield" id="user">
+        <br>
+         <label>Wachtwoord:</label>
+    <input type="password" id="pw">     
+    <br>
+        <br>
+    <input type="button" id="login"  value="Login"  > </form>
+        </div></div>
+       
+        
+</body>
+</html>

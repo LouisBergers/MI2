@@ -1,0 +1,769 @@
+{
+  "leerlingen": [
+    {
+      "voornaam": "Bob",
+      "achternaam": "Bouwers",
+      "leeftijd": 19,
+      "klas": "5A",
+      "foto": "bobbou",
+      
+      "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 39,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 46,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 79,
+           "totaal": 100
+       }   
+     ],
+         "afwezigheden": [ 
+       {
+           "datum": "15 November",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+
+    },
+    {
+      "voornaam": "Maria",
+      "achternaam": "Cyntha",
+      "leeftijd": 21,
+      "klas": "5A",
+      "foto": "marcyn",
+       
+	    "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 79,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       }
+        ,
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 77,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "15 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "Voormiddag"
+       }
+     ]
+    },
+    {
+      "voornaam": "Peter",
+      "achternaam": "Paul",
+      "leeftijd": 20,
+       "klas": "5B",
+      "foto": "petpau",
+       
+ 	   "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 69,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "17 Maart",
+           "lesuur": "Vierde lesuur"
+       },
+       {
+           "datum": "14 mei",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    },
+    {
+      "voornaam": "Klaas",
+      "achternaam": "Bruinsma",
+      "leeftijd":18 ,
+       "klas": "5B",
+      "foto": "klabru",
+       
+ 	  "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 44,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 76,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "25 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    },
+    {
+      "voornaam": "Stijn",
+      "achternaam": "Waaghals",
+      "leeftijd": 19,
+      "klas": "5A",
+      "foto": "stiwaa",
+       
+       "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 20,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 97,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 87,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "19 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "17 januari",
+           "lesuur": "namiddag"
+       },
+       {
+           "datum": "15 November",
+           "lesuur": "Derde lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       }        
+     ]
+
+    },
+    {
+      "voornaam": "Frederik",
+      "achternaam": "Vanklas",
+      "leeftijd": 21,
+      "klas": "5A",
+      "foto": "frevan",
+       
+	   "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 22,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 36,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 80,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "19 Oktober",
+           "lesuur": "Achtste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+    },
+    {
+      "voornaam": "Monica",
+      "achternaam": "Gees",
+      "leeftijd": 20,
+       "klas": "5B",
+      "foto": "mongee",
+       
+ 	   "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 17,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 26,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 83,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "15 November",
+           "lesuur": "Derde lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    },
+    {
+      "voornaam": "Tom",
+      "achternaam": "Matthys",
+      "leeftijd":18 ,
+       "klas": "5B",
+      "foto": "tommat",
+       
+ 	  "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 89,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "17 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       },
+       {
+           "datum": "16 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    },
+    {
+      "voornaam": "Gaelle",
+      "achternaam": "Kasongo",
+      "leeftijd":18 ,
+       "klas": "5B",
+      "foto": "gaekas",
+
+ 	  "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 89,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "17 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       },
+       {
+           "datum": "16 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    },
+    {
+      "voornaam": "Lisa",
+      "achternaam": "Matthys",
+      "leeftijd":18 ,
+       "klas": "5A",
+      "foto": "lismat",
+       
+ 	  "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 89,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "17 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       },
+       {
+           "datum": "16 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    },
+      {
+      "voornaam": "Loic",
+      "achternaam": "Bulambo",
+      "leeftijd":18 ,
+       "klas": "5A",
+      "foto": "loibul",
+         
+ 	  "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 89,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "17 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       },
+       {
+           "datum": "16 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    },
+    {
+      "voornaam": "Indra",
+      "achternaam": "Kosters",
+      "leeftijd":18 ,
+       "klas": "5B",
+      "foto": "indkos",
+       
+ 	  "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 89,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "17 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       },
+       {
+           "datum": "16 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    },
+    {
+      "voornaam": "Bert",
+      "achternaam": "Schroefs",
+      "leeftijd":18 ,
+       "klas": "5B",
+      "foto": "bersch",
+       
+ 	  "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 89,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "17 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       },
+       {
+           "datum": "16 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    },
+    {
+      "voornaam": "Frauke",
+      "achternaam": "Mieremans",
+      "leeftijd":18 ,
+       "klas": "5A",
+      "foto": "framie",
+      
+ 	  "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 89,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "17 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       },
+       {
+           "datum": "16 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    },
+      {
+      "voornaam": "Anne",
+      "achternaam": "De Bakker",
+      "leeftijd":18 ,
+       "klas": "5A",
+      "foto": "annbak", 
+ 	  "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 89,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "17 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       },
+       {
+           "datum": "16 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    },
+    {
+      "voornaam": "Marijke",
+      "achternaam": "Vanop",
+      "leeftijd":18 ,
+       "klas": "5B",
+      "foto": "marvan",
+ 	  "punten": [ 
+       {
+           "datum": "15/06/17",
+           "titel": "Aardrijkskunde: sterren",
+           "score": 33,
+           "totaal": 50
+       },
+       {
+          "datum": "18/03/17",
+           "titel": "Frans: subjonctif",
+           "score": 77,
+           "totaal": 100
+       },
+        {
+           "datum": "15/06/17",
+           "titel": "Programmeren : Dynamische Site",
+           "score": 50,
+           "totaal": 50
+       },
+       {
+          "datum": "15/06/17",
+           "titel": "Aardrijkskunde",
+           "score": 89,
+           "totaal": 100
+       }],   
+        "afwezigheden": [ 
+       {
+           "datum": "17 Oktober",
+           "lesuur": "Eerste lesuur"
+       },
+       {
+           "datum": "14 januari",
+           "lesuur": "namiddag"
+       },
+       {
+           "datum": "16 januari",
+           "lesuur": "namiddag"
+       }
+     ]
+	  
+    }  
+  ],
+  "leerkrachten": [
+    
+    {
+      "voornaam": "Frank",
+      "achternaam": "Kasteel",
+      "klas": "5A",
+      "foto": "frakas",
+        "ww": "test"
+
+    },
+    {
+      "voornaam": "Pierre",
+      "achternaam": "Vanhoef",
+      "klas": "5B",
+      "foto": "pievan",
+	  "ww": "test"
+    }
+  ]
+ 
+}

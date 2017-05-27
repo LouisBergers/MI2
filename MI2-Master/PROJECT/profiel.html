@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Profiel</title>
+				<script src="/js/jquery-3.1.1.js"></script>
+				<link rel="stylesheet" href="stylesheet.css">
+
+</head>
+
+<body>
+		<nav >
+			<ul>
+				<li><a id="data" href="main.html" >Database</a></li>
+                <li><a id="klas" href="#mijnklas">Mijn klas</a></li>
+                <li><a id="nieuws" href="#nieuwsbord">Nieuwsbord</a></li>
+                <li><a id="logout" href="index.html">Logout</a></li>
+			</ul>
+		</nav>
+			
+				
+    <div id="profielinfo">
+
+    <ul class="tabs">
+        <li class="tab current" data-tab="tab-1">Algemeen</li>
+        <li class="tab" data-tab="tab-2">Puntenboek</li>
+         <li class="tab" data-tab="tab-3">Afwezigheden</li>
+        <a href='main.html'  ><li class="tab"  >Terug naar Database</li></a>
+       
+    </ul>
+
+    <div id="tab-1" class="tab-content current">
+        <h2>Algemeen</h2>
+
+        
+
+    </div>
+
+    <div id="tab-2" class="tab-content">
+        <h2>Puntenboek</h2>
+
+        
+       
+   
+
+     </div>
+
+        <div id="tab-3" class="tab-content">
+        <h2>Afwezigheden</h2>
+
+       
+       
+   
+
+        </div>
+        </div>
+				
+    
+				<script>
+                   "use strict" 
+                    $(document).ready(function() {
+                        
+                        $('#nieuws').click(function(){
+                            window.location.replace('nieuwsbord.html')
+                        })
+                        
+                        //$.getJSON("Gebruikers.json", function(data){ 
+                   $.ajax({      
+                    type:"GET",
+				url: "Gebruikers.json",
+				dataType : 'json',
+				}).done(function (data)
+					{   
+                        
+                        
+                        
+                        
+                        var profielid = window.location.hash.substring(1);
+                            
+                        var zichtbare = sessionStorage.getItem('zichtbaar')
+                        var zicht = $.parseJSON(zichtbare)
+                        var voornaam = zicht[profielid].voornaam ;
+                        var achternaam = zicht[profielid].achternaam;
+                        var leeftijd = zicht[profielid].leeftijd;
+                        var klas = zicht[profielid].klas;
+                        var fotonaam = zicht[profielid].foto;  
+                        var aantalafwezigheden = zicht[profielid].afwezigheden.length;
+                        var aantalpunten = zicht[profielid].punten.length;
+                        var aantalleerlingen = zicht.length;
+                        var fotonaam = zicht[profielid].foto;
+                        
+                        
+                      
+                        
+                        
+                        ///inhoud
+                      $("#tab-1").append("<img id='profielfoto' src='img/" + fotonaam + ".jpeg'><p>Voornaam: " + voornaam + "</p><p>Achternaam: " + achternaam + "</p><p>Leeftijd: "+ leeftijd + "</p><p>Klas: " + klas + "</p>");   
+                      
+                                                                    
+                      
+                        var totaal = 0
+                        var mijntotaal = 0
+                        var i;
+                       for (i = 0; i < aantalpunten; i++) 
+                          {
+                             mijntotaal += zicht[profielid].punten[i].score 
+                             totaal += zicht[profielid].punten[i].totaal 
+                          }
+                        var jaartotaal = Math.round((mijntotaal/totaal)*100 * 100.0) / 100.0
+                        
+                        
+                        
+                              
+                              
+                              
+                              
+                          
+                      
+
+                        
+                        
+                        
+                        
+                    
+                        
+                        
+                        
+                         var j;                                           
+                        for (j = 0; j < aantalpunten; j++)                                            
+                         {                                           
+                          $("#tab-2").append("<p>Datum:  " + zicht[profielid].punten[j].datum +  "</p><p>Titel:  " + zicht[profielid].punten[j].titel + "</p><p><b>Score:  " + zicht[profielid].punten[j].score +"/" + zicht[profielid].punten[j].totaal + "</b></p><br>"); 
+                         }
+                         $("#tab-2").append("<p>Jaartotaal: <b>" +  jaartotaal + "</b></p>")                                        
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                         var k;                                           
+                        for (k = 0; k < aantalafwezigheden; k++)                                            
+                        {                                            
+                        
+                        $("#tab-3").append("<p>Datum: " + zicht[profielid].afwezigheden[k].datum + "</p><p>Lesuur: " + zicht[profielid].afwezigheden[k].lesuur + "</p><br>"); 
+                        }
+                        $("#tab-3").append("<p><b>Aantal afwezigheden: " +  aantalafwezigheden + "</b></p>");                                               
+                       
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                      //tabladen
+                      $('ul.tabs li').click(function(){
+                      var tab_id = $(this).attr('data-tab');
+                      $('ul.tabs li').removeClass('current');
+                      $('.tab-content').removeClass('current');
+                      $(this).addClass('current');
+                      $("#"+tab_id).addClass('current');
+                         
+                          
+                      
+                                                                   })})});
+                        
+                        
+      
+	</script>
+    
+    
+ 
+        
+
+
+</body>
+</html>

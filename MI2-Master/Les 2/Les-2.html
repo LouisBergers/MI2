@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta name="description" content="" />
+		<meta name="author" content="Steven" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+      
+        <title>MI2-les2</title>
+</head>
+ 
+<body>
+
+	<br>
+		<style>
+			body {
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				margin-left: 25%;
+				line-height: 10px;
+			}
+			
+			.vierkant {
+				width: 60px;
+				height: 60px;
+				border-style: solid;
+				border-width: 1px;
+				background-color: darkred;
+				border-color: black;
+				padding: 0;
+				display: inline-block;
+			}
+			
+			.vierkant2 {
+				width: 60px;
+				height: 60px;
+				border-style: solid;
+				border-width: 1px;
+				background-color: whitesmoke;
+				border-color: black;
+				padding: 0;
+				display: inline-block;
+			}
+		</style>
+	
+
+	
+		<script type="text/javascript">
+            "use strict"
+			var rows = 0;
+			while (rows < 8) {
+				document.write(8 - rows)
+				var lijnen = 0;
+				if (rows % 2 != 0) {
+					while (lijnen < 8){
+							if (lijnen % 2 != 0) {
+								document.write('<div class="vierkant"></div>');
+							}
+							else {
+								document.write('<div class="vierkant2"></div>')
+							}
+							lijnen++;
+						}
+					}
+					else {
+						while (lijnen < 8) {
+							if (lijnen % 2 != 0) {
+								document.write('<div class="vierkant2"></div>');
+							}
+							else {
+								document.write('<div class="vierkant"></div>')
+							}
+							lijnen++;
+						}
+					}
+					document.write('<br>')
+					rows++;
+				}
+				
+		</script>
+	
+
+	
+</body>
+
+
+</html>

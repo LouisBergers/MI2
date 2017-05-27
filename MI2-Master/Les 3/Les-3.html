@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta name="description" content="" />
+		<meta name="author" content="Steven" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>MI2-les3</title>
+</head>
+ <style type="text/css">
+        .titel {
+            text-align: center;
+            line-height: 250px;
+            font-size: 1px;
+            color: darkmagenta;
+        }
+    </style>
+    <script src="/PROJECT/js/jquery-3.1.1.js"></script>
+    <script type="text/javascript">
+        "use strict";
+        $(document).ready(function () {
+            $("#content").addClass("titel");
+            $("#content").html("Starten met jQuery");
+            $("#content").animate({
+                fontSize: "150px"
+            }, 1500);
+        });
+    </script>
+<body>
+    <div id="content"></div>
+</body>
+
+</html>

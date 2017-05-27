@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Nieuwsbord</title>
+				<script src="/js/jquery-3.1.1.js"></script>
+				<link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<script>
+                    "use strict" 
+    $(document).ready(function() {
+     var messages = ['Vrijdag begint Hackaton','Taak cryptocurrency indienen tegen overmorgen']
+      var test = JSON.stringify(messages) 
+      localStorage.setItem('berichten',test)
+      
+               
+         $('#submit').click(function() { 
+             Post() ;
+         
+         })
+         
+          
+          $('#delete').click(function() { 
+             localStorage.clear();
+        $('#nieuwsbord').empty();
+              var datas = ["",""]
+              var set = JSON.stringify(datas)
+              localStorage.setItem('berichten',set)
+         })
+         
+         
+         
+         
+         function VerversNieuws (){
+                      
+                      var get = localStorage.getItem('berichten')
+                        var uptodate = JSON.parse(get)
+                      var i;
+                        for(i = 0; i < uptodate.length; i++)
+                         {
+                             $('#nieuwsbord').append("<br><p>" + uptodate[i] + "</p>")  
+                            
+                           }}
+   VerversNieuws();
+        function Post(){
+                 var get = localStorage.getItem('berichten')
+                        var uptodate = JSON.parse(get)  
+             var messages = uptodate;
+            
+            
+            
+            
+                var toevoegen = $("#nieuwtje").val();
+               
+                messages.push(toevoegen);
+                var set = JSON.stringify(messages)
+                 localStorage.setItem('berichten', set)
+            
+             $('#nieuwsbord').empty();
+                VerversNieuws ();
+                
+        }
+    
+   
+    
+    
+    
+    });
+                
+                
+               
+            
+                               
+    
+    
+    
+    
+    
+                    
+               
+    
+                  
+          
+    
+                    
+                    
+            
+            
+            
+            
+              
+           
+    
+                   
+                         
+ 
+	</script>
+
+		<nav >
+			<ul>
+				<li><a id="data" href="main.html" >Database</a></li>
+                <li><a id="klas" href="#mijnklas">Mijn klas</a></li>
+                <li><a id="nieuws" href="#nieuwsbord">Nieuwsbord</a></li>
+                <li><a id="logout" href="index.html">Logout</a></li>
+			</ul>
+		</nav>
+			
+	<body>	
+      <div id="profielinfo">   
+    <ul class="tabs">
+        <li class="tab current" data-tab="tab-1">School Nieuws</li> 
+    </ul>
+        
+        
+        
+        
+        
+        <div id="tab-1" class="tab-content current">
+        <h2>School Nieuws</h2>
+    <h3>Als leerkracht kan u hier nieuws plaatsen voor uw leerlingen</h3>
+        
+   <div id='nieuwsbord'></div>
+        
+        <div>
+            <br>
+    <form    id="form" >
+        <br>
+    <input type="button" id="delete"  value="Verwijder alle berichten"  > 
+        <br><br>
+    <textarea id="nieuwtje" placeholder="Uw bericht...."></textarea>
+    <br>
+    <input type="button" id="submit"  value="Plaatsen"  > </form>
+        </div>
+        </div>
+        </div>
+</body>
+</html>
